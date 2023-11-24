@@ -1,0 +1,594 @@
+@font-face {
+  font-family: 'Arial-MT';
+  src: url("../assets/fonts/Arial-MT.woff"); /* Путь к файлу со шрифтом */
+ }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width:1440px;
+  margin:0 auto;
+  width: 100%;
+}
+body {
+  min-width: 480px;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  background: url("../assets/img/bg.jpg") center/cover, rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  transition: background-image 1s ease-in-out;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+.header img{
+  display: flex;
+}
+
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40vh;
+  min-height: 260px;  
+  padding: 20px;
+}
+
+
+.footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.citation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 30vh;
+  min-height: 160px;  
+  padding: 20px;
+}
+
+
+.change-quote:hover {
+  background-image: linear-gradient(-180deg, #1D95C9 0%, #17759C 100%);
+}
+
+@media (min-width: 768px) {
+  .button-43 {
+    padding: 1rem 2rem;
+  }
+}
+.change-quote {
+  background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
+  border-radius: .5rem;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-size: 16px;
+  justify-content: center;
+  padding: 1rem 1.75rem;
+  text-decoration: none;
+  width: 200px;
+  border: 0;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-bottom: 30px;
+
+}
+
+.quote {
+  min-height: 32px;
+}
+
+.idea {
+  min-height: 20px;
+}
+
+@media (max-width: 768px) {
+  .time {
+    min-height: 80px;
+    font-size: 72px;    
+  }
+
+  .greeting-container {
+    min-height: 40px;
+    font-size: 32px;
+  }
+
+  .greeting {
+    padding: 5px;
+  }
+
+  .name {
+    font-size: 32px;
+    padding: 5px;
+  }
+}
+
+
+
+
+
+
+/* todo */
+.dropbtn {
+  background-color: transparent;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #8E49E8;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 400px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  bottom:50px;
+  right: 0px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+.show {display: block;}
+
+
+.wrapper{
+  background: #fff;
+  max-width: 400px;
+  width: 100%;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+}
+.wrapper .inputField{
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  height: 45px;
+}
+.inputField input{
+  width: 85%;
+  height: 100%;
+  outline: none;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  font-size: 17px;
+  padding-left: 15px;
+  transition: all 0.3s ease;
+}
+.inputField input:focus{
+  border-color: #8E49E8;
+}
+.inputField button{
+  width: 50px;
+  height: 100%;
+  border: none;
+  color: #fff;
+  margin-left: 5px;
+  font-size: 21px;
+  outline: none;
+  background: #8E49E8;
+  cursor: pointer;
+  border-radius: 3px;
+  opacity: 0.6;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.inputField button:hover,
+.footer_todo button:hover{
+  background: #721ce3;
+}
+.inputField button.active{
+  opacity: 1;
+  pointer-events: auto;
+}
+.inputField button img{
+  width: 46px;
+  height: 45px;
+}
+.wrapper .todoList{
+  max-height: 250px;
+  overflow-y: auto;
+}
+.todoList li{
+  position: relative;
+  list-style: none;
+  margin-bottom: 8px;
+  background: #f2f2f2;
+  border-radius: 3px;
+  padding: 10px 15px;
+  cursor: default;
+  overflow: hidden;
+  word-wrap: break-word;
+  color: black;
+}
+.todoList li .icon{
+  position: absolute;
+  right: -45px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #e74c3c;
+  width: 45px;
+  text-align: center;
+  color: #fff;
+  /* padding: 10px 15px; */
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.todoList li:hover .icon{
+  right: 0px;
+}
+.wrapper .footer_todo{
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+}
+.footer_todo button{
+  padding: 6px 10px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  margin-left: 5px;
+  background: #8E49E8;
+  cursor: pointer;
+  user-select: none;
+  opacity: 0.6;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.footer_todo button.active{
+  opacity: 1;
+  pointer-events: auto;
+}
+.icon img{
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+}
+
+
+/* player */
+/* style for current time of the track */
+
+.song-title {
+  z-index: 4;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+}
+.currentTime {
+  height: 50px;
+  width: 50px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  color: white;
+  align-items: center;
+}
+
+/* style for the total length of the track */
+.durationTime {
+  height: 50px;
+  width: 50px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  align-items: center;
+  color: rgb(193, 255, 6);
+}
+
+/* style for the progress bar */
+#progress-bar {
+  -webkit-appearance: none;
+  appearance: none;
+  z-index: 4;
+  height: 5px;
+  background: #000000;
+  width: 160pt;
+  bottom: 5%;
+  border-radius: 30px;
+  left: 17%;
+}
+
+/* style for the progress bar's slider thumb */
+#progress-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  margin-top: -3px;
+  margin-left: 0px;
+  height: 10px;
+  width: 7px;
+  border: 0;
+  background: -webkit-linear-gradient(45deg,  rgb(213, 213, 213), rgb(193, 255, 6));
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+/* style for the progress bar's runnable track */
+#progress-bar::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  max-height: 5px;
+  border-radius: 30px;
+}
+
+/* style to remove blue shade of the progress bar when clicked on/selected */
+#progress-bar:focus {
+  outline: none;
+}
+
+/* volume */
+.volume-container {
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  width: 20px;
+  margin-left: 0px;
+}
+.volume-container .volume-button {
+  height: 40px;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.volume-container .volume-button .volume {
+  transform: scale(0.7);
+}
+.volume-container .volume-slider {
+  position: absolute;
+  right: -5px;
+  top: 15px;
+  z-index: -1;
+  width: 0;
+  height: 15px;
+  background: white;
+  box-shadow: 0 0 20px #000a;
+  transition: 0.25s;
+}
+.volume-container .volume-slider .volume-percentage {
+  background: coral;
+  height: 100%;
+  width: 75%;
+}
+.volume-container:hover .volume-slider {
+  right: -123px;
+  width: 100px;
+}
+.time_wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.volume_img.hidden {
+  display: none;
+}
+
+
+
+
+/* popup */
+/* popup-320 */
+.modal {
+  display: none; 
+  position: absolute; 
+  /* padding-top: 500px; */
+  z-index: 50; 
+  left: 0;
+  bottom:50px;
+  width: 600px; 
+  height: 500px; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+  opacity: 0.8;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: rgb(0,0,0);
+  opacity: 0.8;
+  /* margin:0 auto; */
+  padding-left: 45px;
+  border: 1px solid #888;
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  max-height: 500px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animateleft;
+  -webkit-animation-duration: 1s;
+  animation-name: animateleft;
+  animation-duration: 1s
+}
+
+/* Add Animation */
+@keyframes animateleft {
+  from {left:-300px; opacity:0}
+  to {left:0; opacity:1}
+} 
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 50px;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.close:hover,
+.close:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* modal content */
+.container_popup{
+  max-width: 970px;
+  margin: 40px auto;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: space-between;
+  opacity: 1;
+  font-size: 20px;
+  text-align: left;
+}
+h3{
+  margin: 20px;
+}
+.select_language{
+  width: 40px;
+}
+
+*{
+  transition: all 1s linear;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* video */
+.video_slider{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+/* video slider */
+.video_slider{
+  width: 100%;
+  margin-bottom: 40px;
+}
+.video_slider_wrapper{
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  transition: 0.5s ease;
+} 
+.video_slider_vector{
+  width: 600px;
+  height: 16px;
+  bottom: 0;
+  right: 0;
+  float: right;
+  position: relative;
+}
+.video_slider_vector{
+  margin: 0 auto;
+  width: 100%;
+}
+.video-wrapper{
+  display: flex;
+  justify-content: center;
+}
+iframe{
+  width: 100%;
+  height: 100%;
+}
+
+.video_line{
+  display: flex;
+  position: relative;
+  left: 0;
+  transition: 0.5s ease;
+  height: 254px;
+  justify-content: space-between;
+}
+.videoslide{
+  /* flex-basis: 33%;
+  flex-shrink: 0; */
+  margin-right: 42px;
+  cursor: pointer;
+  background-color: transparent;
+  width: 452px; 
+  height: auto;
+  overflow: hidden;
+  transition: 0.1s ease-in;
+  position: relative;
+}
+/* .videoslide.videoactive{
+  pointer-events: none;
+} */
+.video__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video__media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}

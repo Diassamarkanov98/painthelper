@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/owfont-regular.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Painthelper</title>
+</head>
+<body id="body">
+  <header class="header">
+    <img src="./assets/img/Painthelper.com.png" width="500" height="500">
+  </header>
+  <main class="main">
+    <section class="video" id="video">
+      <div class="container">
+          <div class="video_slider">
+              <div class="video_slider_wrapper">
+                  <div class="video_line">
+                      <div class="videoslide videoactive">
+                        <iframe 
+                          width="424" 
+                          height="238" 
+                          src="https://www.youtube.com/embed/lLWEXRAnQd0" 
+                          title="Боб Росс - Остров в дикой местности (сезон 29 эпизод 1)" 
+                          frameborder="0" 
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                          allowfullscreen>
+                        </iframe>
+                      </div>
+                      <div class="videoslide videoactive">
+                        <iframe 
+                          width="424" 
+                          height="238" 
+                          src="https://www.youtube.com/embed/TNB3XY67Q-I" 
+                          title="How to Match Any Color with Oil Paint" 
+                          frameborder="0" 
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                          allowfullscreen>
+                        </iframe>
+                      </div>
+                      <div class="videoslide videoactive">
+                        <iframe 
+                          width="424" 
+                          height="238" 
+                          src="https://www.youtube.com/embed/jH0Vkkc3Mgw" 
+                          title="The MOST useful anatomy idea is also super simple" 
+                          frameborder="0" 
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                          allowfullscreen>
+                        </iframe>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  </main>
+  <footer class="footer">
+    <div class="citation">
+      <span>У тебя нет идей для рисования?</span>
+      <button class="change-quote" id="change-quote">Нажми меня!</button>
+      <div>
+        <div class="idea" id="idea"></div>
+        <div class="quote" id="quote"></div>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+    </script>
+  <script src="./assets/js/index.js"></script>
+  <script src="./assets/js/citation.js"></script>
+  <script type="module" src="./assets/js/index.js"></script>
+
+ 
+</body>
+</html>
